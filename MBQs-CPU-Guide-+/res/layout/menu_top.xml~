@@ -13,8 +13,8 @@
         android:layout_weight="1"
         android:drawableLeft="@drawable/ic_action_refresh_dark"
         android:onClick="onDrawerItemClick"
-        android:tag="Useless"
-        android:text="Refresh" />
+        android:tag="Item no. 1"
+        android:text="Item 1" />
 
     <TextView
         android:id="@+id/item2"
@@ -24,7 +24,7 @@
         android:layout_weight="1"
         android:drawableLeft="@drawable/ic_action_select_all_dark"
         android:onClick="onDrawerItemClick"
-        android:tag="Useless"
-        android:text="Tweet MBQ" />
+        android:tag="Item no. 2"
+        android:text="Item 2" />
 
 </LinearLayout>
