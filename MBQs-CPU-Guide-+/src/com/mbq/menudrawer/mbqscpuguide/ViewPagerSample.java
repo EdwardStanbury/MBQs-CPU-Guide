@@ -1,7 +1,9 @@
 package com.mbq.menudrawer.mbqscpuguide;
 
-import com.mbq.menudrawer.MenuDrawer;
+import java.util.ArrayList;
+import java.util.List;
 
+import net.simonvt.menudrawer.MenuDrawer;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,9 +21,6 @@ import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ViewPagerSample extends FragmentActivity {
 

@@ -1,8 +1,10 @@
 package com.mbq.menudrawer.mbqscpuguide;
 
-import com.mbq.menudrawer.MenuDrawer;
-import com.mbq.menudrawer.Position;
+import java.util.ArrayList;
+import java.util.List;
 
+import net.simonvt.menudrawer.MenuDrawer;
+import net.simonvt.menudrawer.Position;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,9 +13,6 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class StaticDrawerSample extends Activity {
 

@@ -1,7 +1,6 @@
 package com.mbq.menudrawer.mbqscpuguide;
 
-import com.mbq.menudrawer.MenuDrawer;
-
+import net.simonvt.menudrawer.MenuDrawer;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;

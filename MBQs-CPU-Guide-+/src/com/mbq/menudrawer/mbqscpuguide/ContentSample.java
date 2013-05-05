@@ -1,6 +1,9 @@
 package com.mbq.menudrawer.mbqscpuguide;
 
-import com.mbq.menudrawer.MenuDrawer;
+import java.util.ArrayList;
+import java.util.List;
+
+import net.simonvt.menudrawer.MenuDrawer;
 
 import android.app.Activity;
 import android.os.Build;
@@ -13,9 +16,6 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ContentSample extends Activity {
 
