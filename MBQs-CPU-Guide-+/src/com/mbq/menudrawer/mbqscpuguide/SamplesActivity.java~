@@ -30,9 +30,10 @@ public class SamplesActivity extends ListActivity {
         mAdapter.addSample("Right menu", "The menu is positioned to the right of the content", RightMenuSample.class);
         mAdapter.addSample("MBQs Twitter Feed", "MBQ_'s Twitter feed", TopMenuSample.class);
         mAdapter.addSample("MBQs current ROM and kernel", "What I'm currently running", BottomMenuSample.class);
-        mAdapter.addSample("Settings", "Change this app to your liking. :)", ViewPagerSample.class);
-        mAdapter.addSample("Version", "Shows the apps build date and version", LayoutSample.class);
-        mAdapter.addSample("DPI Changer", "Change your ROMs DPI quickly and easily", StaticDrawerSample.class);
+        mAdapter.addSample("Touch Mode", "The menu touch behavior change according to different"
+                + " content view state (Ex: View Pager)", ViewPagerSample.class);
+        mAdapter.addSample("Layout xml", "The drawer and its menu and content is defined in XML", LayoutSample.class);
+        mAdapter.addSample("Static drawer", "The drawer is always visible", StaticDrawerSample.class);
 
         setListAdapter(mAdapter);
     }
