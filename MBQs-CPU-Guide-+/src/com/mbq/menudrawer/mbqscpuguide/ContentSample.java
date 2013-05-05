@@ -45,20 +45,20 @@ public class ContentSample extends Activity {
         mMenuDrawer.setTouchMode(MenuDrawer.TOUCH_MODE_FULLSCREEN);
 
         List<Object> items = new ArrayList<Object>();
-        items.add(new Item("Item 1", R.drawable.ic_action_refresh_dark));
-        items.add(new Item("Item 2", R.drawable.ic_action_select_all_dark));
-        items.add(new Category("Cat 1"));
-        items.add(new Item("Item 3", R.drawable.ic_action_refresh_dark));
-        items.add(new Item("Item 4", R.drawable.ic_action_select_all_dark));
-        items.add(new Category("Cat 2"));
-        items.add(new Item("Item 5", R.drawable.ic_action_refresh_dark));
-        items.add(new Item("Item 6", R.drawable.ic_action_select_all_dark));
-        items.add(new Category("Cat 3"));
-        items.add(new Item("Item 7", R.drawable.ic_action_refresh_dark));
-        items.add(new Item("Item 8", R.drawable.ic_action_select_all_dark));
-        items.add(new Category("Cat 4"));
-        items.add(new Item("Item 9", R.drawable.ic_action_refresh_dark));
-        items.add(new Item("Item 10", R.drawable.ic_action_select_all_dark));
+        items.add(new Item("Help", R.drawable.ic_action_refresh_dark));
+        items.add(new Item("About", R.drawable.ic_action_select_all_dark));
+        items.add(new Category("CPU Guide"));
+        items.add(new Item("List", R.drawable.ic_action_refresh_dark));
+        items.add(new Item("Information", R.drawable.ic_action_select_all_dark));
+        items.add(new Category("IO Sched."));
+        items.add(new Item("List", R.drawable.ic_action_refresh_dark));
+        items.add(new Item("Information", R.drawable.ic_action_select_all_dark));
+        items.add(new Category("TricksterMOD"));
+        items.add(new Item("Settings List", R.drawable.ic_action_refresh_dark));
+        items.add(new Item("Information", R.drawable.ic_action_select_all_dark));
+        items.add(new Category("Combos"));
+        items.add(new Item("CPU and IO", R.drawable.ic_action_refresh_dark));
+        items.add(new Item("TricksterMOD", R.drawable.ic_action_select_all_dark));
 
         mList = new ListView(this);
         mAdapter = new MenuAdapter(items);
