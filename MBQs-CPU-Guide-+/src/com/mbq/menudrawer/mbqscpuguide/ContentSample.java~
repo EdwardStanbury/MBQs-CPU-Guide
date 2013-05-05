@@ -1,29 +1,26 @@
 package com.mbq.menudrawer.mbqscpuguide;
 
-import com.mbq.menudrawer.MenuDrawer;
-import com.mbq.menudrawer.Position;
+import net.simonvt.menudrawer.MenuDrawer;
 
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RightMenuSample extends Activity {
+public class ContentSample extends Activity {
 
-    private static final String STATE_ACTIVE_POSITION = "com.mbq.menudrawer.mbqscpuguide.RightMenuSample.activePosition";
-    private static final String STATE_CONTENT_TEXT = "com.mbq.menudrawer.mbqscpuguide.RightMenuSample.contentText";
-
-    private static final int MENU_OVERFLOW = 1;
+    private static final String STATE_ACTIVE_POSITION = "net.simonvt.menudrawer.samples.ContentSample.activePosition";
+    private static final String STATE_CONTENT_TEXT = "net.simonvt.menudrawer.samples.ContentSample.contentText";
 
     private MenuDrawer mMenuDrawer;
 
@@ -43,8 +40,9 @@ public class RightMenuSample extends Activity {
             mContentText = inState.getString(STATE_CONTENT_TEXT);
         }
 
-        mMenuDrawer = MenuDrawer.attach(this, MenuDrawer.MENU_DRAG_CONTENT, Position.RIGHT);
-        mMenuDrawer.setContentView(R.layout.activity_rightmenu);
+        mMenuDrawer = MenuDrawer.attach(this, MenuDrawer.MENU_DRAG_CONTENT);
+        mMenuDrawer.setContentView(R.layout.activity_contentsample);
+        mMenuDrawer.setTouchMode(MenuDrawer.TOUCH_MODE_FULLSCREEN);
 
         List<Object> items = new ArrayList<Object>();
         items.add(new Item("Item 1", R.drawable.ic_action_refresh_dark));
@@ -55,9 +53,13 @@ public class RightMenuSample extends Activity {
         items.add(new Category("Cat 2"));
         items.add(new Item("Item 5", R.drawable.ic_action_refresh_dark));
         items.add(new Item("Item 6", R.drawable.ic_action_select_all_dark));
+        items.add(new Category("Cat 3"));
+        items.add(new Item("Item 7", R.drawable.ic_action_refresh_dark));
+        items.add(new Item("Item 8", R.drawable.ic_action_select_all_dark));
+        items.add(new Category("Cat 4"));
+        items.add(new Item("Item 9", R.drawable.ic_action_refresh_dark));
+        items.add(new Item("Item 10", R.drawable.ic_action_select_all_dark));
 
-        // A custom ListView is needed so the drawer can be notified when it's scrolled. This is to update the position
-        // of the arrow indicator.
         mList = new ListView(this);
         mAdapter = new MenuAdapter(items);
         mList.setAdapter(mAdapter);
@@ -65,8 +67,19 @@ public class RightMenuSample extends Activity {
 
         mMenuDrawer.setMenuView(mList);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+            getActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
         mContentTextView = (TextView) findViewById(R.id.contentText);
         mContentTextView.setText(mContentText);
+
+        mMenuDrawer.setOnInterceptMoveEventListener(new MenuDrawer.OnInterceptMoveEventListener() {
+            @Override
+            public boolean isViewDraggable(View v, int dx, int x, int y) {
+                return v instanceof SeekBar;
+            }
+        });
     }
 
     private AdapterView.OnItemClickListener mItemClickListener = new AdapterView.OnItemClickListener() {
@@ -87,19 +100,9 @@ public class RightMenuSample extends Activity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuItem overflowItem = menu.add(0, MENU_OVERFLOW, 0, null);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-            overflowItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        }
-        overflowItem.setIcon(R.drawable.ic_menu_moreoverflow_normal_holo_light);
-        return true;
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case MENU_OVERFLOW:
+            case android.R.id.home:
                 mMenuDrawer.toggleMenu();
                 return true;
         }

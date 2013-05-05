@@ -1,7 +1,7 @@
 package com.mbq.menudrawer.mbqscpuguide;
 
-import com.mbq.menudrawer.MenuDrawer;
-import com.mbq.menudrawer.Position;
+import net.simonvt.menudrawer.MenuDrawer;
+import net.simonvt.menudrawer.Position;
 
 import android.app.Activity;
 import android.os.Build;
@@ -20,8 +20,8 @@ import java.util.List;
 
 public class RightMenuSample extends Activity {
 
-    private static final String STATE_ACTIVE_POSITION = "com.mbq.menudrawer.mbqscpuguide.RightMenuSample.activePosition";
-    private static final String STATE_CONTENT_TEXT = "com.mbq.menudrawer.mbqscpuguide.RightMenuSample.contentText";
+    private static final String STATE_ACTIVE_POSITION = "net.simonvt.menudrawer.samples.RightMenuSample.activePosition";
+    private static final String STATE_CONTENT_TEXT = "net.simonvt.menudrawer.samples.RightMenuSample.contentText";
 
     private static final int MENU_OVERFLOW = 1;
 

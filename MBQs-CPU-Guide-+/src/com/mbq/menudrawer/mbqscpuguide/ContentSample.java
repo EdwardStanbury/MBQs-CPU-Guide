@@ -1,6 +1,6 @@
 package com.mbq.menudrawer.mbqscpuguide;
 
-import net.simonvt.menudrawer.MenuDrawer;
+import com.mbq.menudrawer.MenuDrawer;
 
 import android.app.Activity;
 import android.os.Build;
@@ -19,8 +19,8 @@ import java.util.List;
 
 public class ContentSample extends Activity {
 
-    private static final String STATE_ACTIVE_POSITION = "net.simonvt.menudrawer.samples.ContentSample.activePosition";
-    private static final String STATE_CONTENT_TEXT = "net.simonvt.menudrawer.samples.ContentSample.contentText";
+    private static final String STATE_ACTIVE_POSITION = "com.mbq.menudrawer.mbqscpuguide.ContentSample.activePosition";
+    private static final String STATE_CONTENT_TEXT = "com.mbq.menudrawer.mbqscpuguide.ContentSample.contentText";
 
     private MenuDrawer mMenuDrawer;
 

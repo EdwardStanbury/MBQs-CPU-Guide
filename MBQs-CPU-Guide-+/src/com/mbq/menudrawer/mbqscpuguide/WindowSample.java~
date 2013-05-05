@@ -1,6 +1,6 @@
 package com.mbq.menudrawer.mbqscpuguide;
 
-import com.mbq.menudrawer.MenuDrawer;
+import net.simonvt.menudrawer.MenuDrawer;
 
 import android.app.Activity;
 import android.os.Build;
@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 public class WindowSample extends Activity implements View.OnClickListener {
 
-    private static final String STATE_MENUDRAWER = "com.mbq.menudrawer.mbqscpuguide.WindowSample.menuDrawer";
-    private static final String STATE_ACTIVE_VIEW_ID = "com.mbq.menudrawer.mbqscpuguide.WindowSample.activeViewId";
+    private static final String STATE_MENUDRAWER = "net.simonvt.menudrawer.samples.WindowSample.menuDrawer";
+    private static final String STATE_ACTIVE_VIEW_ID = "net.simonvt.menudrawer.samples.WindowSample.activeViewId";
 
     private MenuDrawer mMenuDrawer;
     private TextView mContentTextView;
